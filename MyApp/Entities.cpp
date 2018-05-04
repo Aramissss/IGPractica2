@@ -358,17 +358,26 @@ void GrassPot::render(glm::dmat4 const& modelViewMat)
 	
 }
 
-Esfera::Esfera()
+Esfera::Esfera(GLfloat radius, GLfloat posX, GLfloat posY, GLfloat posZ)
 {
 	//En la luz para cambiar la variable static hay que hacer      tipo  nombre::variable = loquesea    en el cpp
+	qobj = gluNewQuadric();
+	radio = radius;
+	x = posX;
+	y = posY;
+	z = posZ;
 	
-
 }
 
 void Esfera::render(glm::dmat4 const & modelViewMat)
 {
+	draw();
 }
 
 void Esfera::draw()
-{
+{						
+
+	glTranslatef(x, y, z);
+	gluSphere(qobj, radio, 32, 8);	
+	glTranslatef(-x, -y, -z);
 }

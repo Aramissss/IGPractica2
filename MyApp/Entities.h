@@ -154,11 +154,15 @@ public:
 class Esfera : public Entity
 {
 public:
-	Esfera();
+	Esfera(GLfloat radius, GLfloat posX, GLfloat posY, GLfloat posZ);
 	~Esfera() {};
 	void render(glm::dmat4 const& modelViewMat);
 	virtual void draw();
 	GLUquadricObj* qobj;
+	GLfloat radio;
+	GLfloat x;
+	GLfloat y;
+	GLfloat z;
 };
 
 #endif //_H_Entities_H_
