@@ -358,26 +358,27 @@ void GrassPot::render(glm::dmat4 const& modelViewMat)
 	
 }
 
-Esfera::Esfera(GLfloat radius, GLfloat posX, GLfloat posY, GLfloat posZ)
+Esfera::Esfera(GLfloat radius)
 {
 	//En la luz para cambiar la variable static hay que hacer      tipo  nombre::variable = loquesea    en el cpp
+	texture.load("..\\datosP2\\mars.bmp");
+	material.load();
 	qobj = gluNewQuadric();
 	radio = radius;
-	x = posX;
-	y = posY;
-	z = posZ;
-	
 }
 
 void Esfera::render(glm::dmat4 const & modelViewMat)
 {
+	dmat4 aMat = modelViewMat * modelMat;
+	glMatrixMode(GL_MODELVIEW);
+	glLoadMatrixd(value_ptr(aMat));
 	draw();
 }
 
 void Esfera::draw()
-{						
-
-	glTranslatef(x, y, z);
+{			
+	texture.bind();
+	gluQuadricTexture(qobj, TRUE);
 	gluSphere(qobj, radio, 32, 8);	
-	glTranslatef(-x, -y, -z);
+	texture.unbind();
 }

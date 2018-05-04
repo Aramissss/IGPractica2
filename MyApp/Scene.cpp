@@ -31,9 +31,28 @@ void Scene::init()
   objetos.push_back(new Grass());
   objetos.push_back(new GrassPot());
 */
-  objetos.push_back(new Esfera(50, 150,50,0));
-  objetos.push_back(new Esfera(80, 0, 00, 0));
-  objetos.push_back(new Esfera(60, -200, -50, 40));
+
+  objetos.push_back(new Esfera(50));
+
+  dmat4 aMat = camera->getViewMat() * 1.0 ;
+  aMat = translate(aMat, dvec3(-50.0, 0.0, 0.0));
+  Material m;
+  objetos[0]->setModelMat(aMat);
+  objetos[0]->setMaterial(m);
+
+  objetos.push_back(new Esfera(80));
+
+  aMat = camera->getViewMat() * 1.0;
+  aMat = translate(aMat, dvec3(150.0, 0.0, 0.0));
+  objetos[1]->setModelMat(aMat);
+
+  objetos.push_back(new Esfera(60));
+
+  aMat = camera->getViewMat() * 1.0;
+  aMat = translate(aMat, dvec3(0.0, 100.0, 0.0));
+  objetos[2]->setModelMat(aMat);
+
+
 }
 //-------------------------------------------------------------------------
 
@@ -51,6 +70,7 @@ Scene::~Scene()
 void Scene::render()
 {
 	  glMatrixMode(GL_MODELVIEW);
+
 
 	  for (int i = 0; i < objetos.size(); i++){
 		  camera->getVP()->setPosition(0, 0);

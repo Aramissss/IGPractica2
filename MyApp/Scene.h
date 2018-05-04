@@ -6,6 +6,8 @@
 #include <vector>
 #include "Camera.h"
 #include "Entities.h"
+#include "Light.h"
+#include "SpotLight.h"
 
 //-------------------------------------------------------------------------
 
@@ -20,6 +22,7 @@ public:
 	  void rotateDiabolo(GLdouble angle);
 	  
 protected:
+	Light* foco;
 	  Camera* camera;
 	  std::vector<Entity*> objetos;
 };
