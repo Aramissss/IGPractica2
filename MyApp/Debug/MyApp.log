@@ -1,0 +1,26 @@
+﻿  Light.cpp
+c:\users\aramis\documents\ig\practica2\myapp\light.h(26): error C2535: 'void Light::disable(void)' : member function already defined or declared
+          c:\users\aramis\documents\ig\practica2\myapp\light.h(21) : see declaration of 'Light::disable'
+c:\users\aramis\documents\ig\practica2\myapp\light.h(31): error C2086: 'GLuint Light::id' : redefinition
+          c:\users\aramis\documents\ig\practica2\myapp\light.h(10) : see declaration of 'Light::id'
+c:\users\aramis\documents\ig\practica2\myapp\light.cpp(6): error C2084: function 'Light::Light(void)' already has a body
+          c:\users\aramis\documents\ig\practica2\myapp\light.h(11) : see previous definition of '{ctor}'
+c:\users\aramis\documents\ig\practica2\myapp\light.cpp(11): error C2084: function 'Light::~Light(void)' already has a body
+          c:\users\aramis\documents\ig\practica2\myapp\light.h(18) : see previous definition of '{dtor}'
+  Generating Code...
+  Compiling...
+  Scene.cpp
+c:\users\aramis\documents\ig\practica2\myapp\light.h(26): error C2535: 'void Light::disable(void)' : member function already defined or declared
+          c:\users\aramis\documents\ig\practica2\myapp\light.h(21) : see declaration of 'Light::disable'
+c:\users\aramis\documents\ig\practica2\myapp\light.h(31): error C2086: 'GLuint Light::id' : redefinition
+          c:\users\aramis\documents\ig\practica2\myapp\light.h(10) : see declaration of 'Light::id'
+c:\users\aramis\documents\ig\practica2\myapp\scene.cpp(75): warning C4018: '<' : signed/unsigned mismatch
+  Generating Code...
+  Compiling...
+  main.cpp
+c:\users\aramis\documents\ig\practica2\myapp\light.h(26): error C2535: 'void Light::disable(void)' : member function already defined or declared
+          c:\users\aramis\documents\ig\practica2\myapp\light.h(21) : see declaration of 'Light::disable'
+c:\users\aramis\documents\ig\practica2\myapp\light.h(31): error C2086: 'GLuint Light::id' : redefinition
+          c:\users\aramis\documents\ig\practica2\myapp\light.h(10) : see declaration of 'Light::id'
+c:\users\aramis\documents\ig\practica2\myapp\main.cpp(169): warning C4065: switch statement contains 'default' but no 'case' labels
+  Generating Code...
